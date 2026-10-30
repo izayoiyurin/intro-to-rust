@@ -1,0 +1,111 @@
+/* Keep code readable before highlighting loads and across all mdBook themes. */
+:root {
+    --code-bg: #f2f5fa;
+    --code-fg: #243146;
+    --code-border: #d6deea;
+    --code-accent: #4b78a8;
+}
+
+.rust {
+    --code-bg: #f3ede3;
+    --code-fg: #3b3028;
+    --code-border: #cdbca5;
+    --code-accent: #a65e35;
+}
+
+.coal, .navy {
+    --code-bg: #202735;
+    --code-fg: #d8dee9;
+    --code-border: #414d63;
+    --code-accent: #81a8d8;
+}
+
+.ayu {
+    --code-bg: #171f29;
+    --code-fg: #d6dce5;
+    --code-border: #384657;
+    --code-accent: #e6b66c;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not(.js) {
+        --code-bg: #202735;
+        --code-fg: #d8dee9;
+        --code-border: #414d63;
+        --code-accent: #81a8d8;
+    }
+}
+
+.content pre {
+    margin-block: 1.5em;
+    border: 1px solid var(--code-border);
+    border-inline-start: 4px solid var(--code-accent);
+    border-radius: 8px;
+    background: var(--code-bg);
+    color: var(--code-fg);
+    line-height: 1.65;
+    tab-size: 4;
+}
+
+.content pre > code {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 1.4rem 1.6rem;
+    border-radius: 7px;
+    background: var(--code-bg);
+    color: var(--code-fg);
+    overflow-x: auto;
+    overflow-wrap: normal;
+}
+
+.content pre > code.ace_editor {
+    padding: 0;
+}
+
+.content :not(pre):not(a) > code {
+    padding: 0.15em 0.35em;
+    border-radius: 4px;
+    background: var(--code-bg);
+    color: var(--inline-code-color);
+}
+
+.content pre > .buttons {
+    top: 6px;
+    right: 6px;
+}
+
+.content pre:focus-within > .buttons {
+    visibility: visible;
+    opacity: 1;
+}
+
+.content pre > .result {
+    padding: 1rem 1.6rem;
+    border-top: 1px solid var(--code-border);
+    white-space: pre-wrap;
+}
+
+@media (pointer: coarse) {
+    .content pre > .buttons {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media print {
+    .content pre {
+        --code-bg: #f5f5f5;
+        --code-fg: #000;
+        --code-border: #ccc;
+        --code-accent: #777;
+        box-shadow: none;
+    }
+
+    .content pre > .buttons {
+        display: none;
+    }
+
+    .sidetoc {
+        display: none;
+    }
+}

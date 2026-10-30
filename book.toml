@@ -12,10 +12,10 @@ build-dir = "book"
 create-missing = false
 
 [output.html]
-additional-css = ["theme/pagetoc.css"]
+additional-css = ["theme/pagetoc.css", "theme/code.css"]
 additional-js  = ["theme/pagetoc.js"]
-edit-url-template = "https://github.com/xushaohua/intro-to-rust/edit/main/{path}"
-git-repository-url = "https://github.com/xushaohua/intro-to-rust"
+edit-url-template = "https://github.com/izayoiyurin/intro-to-rust/edit/main/{path}"
+git-repository-url = "https://github.com/izayoiyurin/intro-to-rust"
 mathjax-support = false
 
 [output.html.fold]
